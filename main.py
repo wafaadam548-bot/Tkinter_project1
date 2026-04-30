@@ -1,12 +1,14 @@
+import random
 print(""" Welcome to our gaming world!. We have many many games options. Chaose any game you want to play and enjoy your time  """)
-choice=input("""Enter your choice:
+choice=int(input("""Enter your choice:
 1/Mad libs
 2/ Mastermind
 3/Mental math game 
 4/Trivia game 
 5/ Word gussing name
-6/ Escape room """)
+6/ Escape room """))
 def Mad_libs():
+    
     while True:
         print("Welcom to Mad Libs game ")
         num=int(input("chose a number from 1 to 6: "))
@@ -48,5 +50,30 @@ def Mad_libs():
             continue       
         else:
             exit(0)
-if choice=="1":
+def Mastermind():
+    code=random.randint(100,900)
+    Code=[]
+    player_num=[]
+    player_choice=(input("enter a number"))
+    for i  in code:
+        Code.append(i)
+    for j in player_choice:
+        player_num.append(j)        
+    if player_num[0]==Code[0]:
+        print("First num is right ")
+    if player_num[1]==Code[1]:
+        print("sec Num is right ")
+    if player_num[2]==Code[2]:
+        print("Thierd num is right ")
+    if len(player_num) != 3:
+        print("enter 3 digits only")    
+    else:
+        print("No thing is right try again =)")            
+
+    print()
+def Mental_math_health():
+    
+if choice==1:
     Mad_libs()
+elif choice==2:
+    Mastermind()
