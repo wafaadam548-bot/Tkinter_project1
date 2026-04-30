@@ -51,28 +51,75 @@ def Mad_libs():
         else:
             exit(0)
 def Mastermind():
-    code=random.randint(100,900)
-    Code=[]
-    player_num=[]
-    player_choice=(input("enter a number"))
-    for i  in code:
-        Code.append(i)
-    for j in player_choice:
-        player_num.append(j)        
-    if player_num[0]==Code[0]:
-        print("First num is right ")
-    if player_num[1]==Code[1]:
-        print("sec Num is right ")
-    if player_num[2]==Code[2]:
-        print("Thierd num is right ")
-    if len(player_num) != 3:
-        print("enter 3 digits only")    
-    else:
-        print("No thing is right try again =)")            
-
-    print()
+    while True:
+        code=random.randint(100,900)
+        Code=[]
+        player_num=[]
+        player_choice=(input("enter a number"))
+        for i  in code:
+            Code.append(i)
+        for j in player_choice:
+            player_num.append(j)        
+        if player_num[0]==Code[0]:
+            print("First num is right ")
+        if player_num[1]==Code[1]:
+            print("sec Num is right ")
+        if player_num[2]==Code[2]:
+            print("Thierd num is right ")
+        if len(player_num) != 3:
+            print("enter 3 digits only")    
+        else:
+            print("No thing is right try again =)")            
+        replay=input("Do you want to play Mental Math helth again yes or no : ")
+        if replay.lower()=="yes" :
+            continue
+        else:
+            exit(0) 
+        print()
 def Mental_math_health():
-    
+    score=0
+    while True:
+        num1=random.randint(1,20)
+        num2=random.randint(1,20)
+        sym=random.choice(["+","-","/","%","*"])
+        if sym=="+":
+            Sum=num1+num2
+            result=sum
+        elif sym=="-":
+            Sum=num1-num2
+            result=sum
+        elif sym=="/":
+            Sum=num1//num2
+            result=sum
+        elif sym=="%":
+            Sum =num1%num2
+            result=sum
+        elif sym=="*":
+            Sum=num1*num2
+            result=Sum                
+        equation=int(input(f" what is the result for {num1} {sym} {num2}: "))
+        if equation==Sum:
+            print("You're right ")
+            score+=1
+            print(score)
+            if score==0:
+                print("Game over ")      
+        elif equation!=Sum:
+            print("You're wronng ")
+            score-=1
+            if score==0:
+                print("Game over ")      
+        else:
+            print("please foloow instructions ")
+            continue
+        replay=input("Do you want to play Mental Math helth again yes or no : ")
+        if replay.lower()=="yes" :
+            continue
+        else:
+            exit(0) 
+        
+
+
 if choice==1:
     Mad_libs()
 elif choice==2:
