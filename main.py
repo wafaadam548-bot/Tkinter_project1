@@ -6,7 +6,5 @@ choice=input("""Enter your choice:
 4/Trivia game 
 5/ Word gussing name
 6/ Escape room """)
-score=20
-print("hint : Sometimes the safest way forward is the one less seen!!!")
-while score>0:
-    print(f"{choice}: with all these money I am going to be rich and achive all my dreams")
+if choice=="1":
+    import Mad_libs

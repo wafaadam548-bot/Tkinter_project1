@@ -1,17 +1,17 @@
 while True:
     print("Welcom to Mad Libs game ")
-    num=input("chose a number from 1 to 6: ")
+    num=int(input("chose a number from 1 to 6: "))
     emothion=input("Enter an Emotion ")
     name=input("Please Enter a name ")
     place=input("Please Enter a place ")
     verb=input("Please enter a verb ")
     obj=input("Please Enter an object ")
     adjective=input("Please enter an adjective ")
-    for i in  num:
+    for i in num:
         if i==1:
             print("This Mad lib called A Crazy Day ")
             print(f"""I went to the{place} with my {name}. We saw a very {adjective} 
-        dog that started to {verb} Loudly. I was so {emothion} that I dropped {obj}""")
+            dog that started to {verb} Loudly. I was so {emothion} that I dropped {obj}""")
         elif i==2:
             print("This mad lib called The Weirdest Teacher Ever")
             print(f""" My teacher {name } is very {adjective}. Every day they make us {verb} in the {place}. Yesterday I accidentally brought a 
